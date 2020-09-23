@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="588.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homebook2.HomeBookController">
+   <top>
+      <HBox prefHeight="36.0" prefWidth="615.0" spacing="5.0" style="-fx-background-color: lightblue;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="labConnid" prefHeight="24.0" prefWidth="65.0" text="접속중인ID:" />
+            <Label fx:id="labUserid" prefHeight="24.0" prefWidth="79.0" text="사용자ID" />
+            <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#logout" text="로그아웃">
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </Button>
+            <DatePicker fx:id="txtDay" prefHeight="23.0" prefWidth="126.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin></DatePicker>
+            <ComboBox fx:id="comSection" prefHeight="23.0" prefWidth="66.0" promptText="지출">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin></ComboBox>
+            <ComboBox fx:id="comTitle" prefWidth="150.0" promptText="부식비">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin></ComboBox>
+            <TextField fx:id="txtRemark" promptText="적요">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></TextField>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </top>
+   <center>
+      <TableView fx:id="table" onMouseReleased="#selectRow" prefHeight="432.0" prefWidth="744.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="colSerialno" prefWidth="75.0" text="일련번호" />
+            <TableColumn fx:id="colUserid" prefWidth="75.0" text="사용자ID" />
+            <TableColumn fx:id="colDay" prefWidth="75.0" text="일자" />
+            <TableColumn fx:id="colSection" prefWidth="75.0" text="구분" />
+            <TableColumn fx:id="colTitle" prefWidth="75.0" text="계정과목" />
+            <TableColumn fx:id="colRemark" prefWidth="75.0" text="적요" />
+            <TableColumn fx:id="colRevenue" prefWidth="75.0" text="수입" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <HBox prefHeight="47.0" prefWidth="916.0" spacing="10.0" style="-fx-background-color: lightblue;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="txtRevenue" promptText="수입" />
+            <Button fx:id="btnRevenue" mnemonicParsing="false" onAction="#actinsert" text="수입/지출입력" />
+            <TextField fx:id="txtSum" prefHeight="23.0" prefWidth="107.0">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin></TextField>
+            <Button fx:id="bntSum" mnemonicParsing="false" onAction="#actsum" prefHeight="23.0" prefWidth="88.0" text="총합출력" />
+            <Button fx:id="btnRefresh" mnemonicParsing="false" onAction="#actrefresh" prefHeight="23.0" prefWidth="91.0" text="새로고침">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#actdelete" text="삭제" />
+         </children>
+      </HBox>
+   </bottom>
+   <right>
+      <Button fx:id="btnAccountReg" mnemonicParsing="false" onAction="#actAccountReg" text="계정과목등록" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

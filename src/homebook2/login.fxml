@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="388.0" prefWidth="401.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homebook2.loginController">
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="txtID" alignment="CENTER" prefHeight="8.0" prefWidth="111.0" promptText="ID">
+               <HBox.margin>
+                  <Insets top="200.0" />
+               </HBox.margin>
+            </TextField>
+            <PasswordField fx:id="txtPassword" promptText="password" onAction="#login">
+               <HBox.margin>
+                  <Insets top="200.0" />
+               </HBox.margin>
+            </PasswordField>
+            <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#login" prefHeight="4.0" prefWidth="96.0" text="로그인">
+               <HBox.margin>
+                  <Insets top="200.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

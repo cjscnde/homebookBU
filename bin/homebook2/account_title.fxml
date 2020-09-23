@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="552.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homebook2.AccountController">
+   <top>
+      <HBox prefHeight="34.0" prefWidth="459.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="txtTitleid" prefHeight="23.0" prefWidth="70.0" promptText="계정코드" />
+            <TextField fx:id="txtTitle" promptText="계정과목" />
+            <Button fx:id="btnInsert" mnemonicParsing="false" onAction="#ActInsert" text="등록" />
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#ActDelete" text="삭제">
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin></Button>
+            <TextField fx:id="txtFind" prefHeight="23.0" prefWidth="99.0" promptText="계정과목찾기" />
+            <Button fx:id="btnFind" mnemonicParsing="false" onAction="#ActFind" text="찾기" />
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <TableView fx:id="table" prefHeight="475.0" prefWidth="547.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colTitleid" prefWidth="68.0" text="계정코드" />
+          <TableColumn fx:id="colTitle" minWidth="0.0" prefWidth="146.0" text="계정과목" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
